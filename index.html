@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/fontawesome/all.min.css">
+    <link rel="shortcut icon" href="asset/images/faicon.png" type="image/png">
+</head>
+
+<body>
+
+    <div class="container my-5">
+
+        <!-- cabeçalho -->
+        <div class="row mb-4">
+            <div class="col">
+                <div class="d-flex justify-content-start">
+                    <img src="asset/images/faicon.png" alt="logo" srcset="img-fluid me-3" width="40px">
+                    <h1>Lista de Tarefas</h1>
+                </div>
+            </div>
+            <div class="col text-end">
+                <div class="d-flex justify-content-end">
+                    <select id="select-filter" class="form-select me-3 w-50">
+                        <option value=""></option>
+                        <option value="">filtro 1</option>
+                        <option value="">filtro 2</option>
+                    </select>
+                    <a href="new_task.html" class="btn btn-primary"><i class="fa-solid fa-plus me-2"></i>Nova tarefa</a>
+                </div>
+            </div>
+            <hr class="my-3">
+        </div>
+
+        <!-- aspecto visula de uma tarefa -->
+        <div class="row mb-3">
+            <div class="col-12 border border-secondary rounded p-3 shadow">
+                <div class="row align-items-center">
+                    <div class="col-8">
+                        <div class="d-flex align-items-center">
+                            <h5><i class="fa-solid fa-circle-chevron-right me-2"></i></h5>
+                            <h5>ipsum dolor sit amet consectetur adipisicing elit. Recusandae nobis exercitationem repellat adipisci, sapiente doloribus.</h5>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <select id="task_status p-2">
+                            <option value="new">new</option>
+                            <option value="in progress">in progress</option>
+                            <option value="canceled">canceled</option>
+                            <option value="done">done</option>
+                        </select>
+                    </div>
+                    <div class="col-1 text-end"><i class="fa-solid fa-pen-to-square me-2"></i>Edit</div>
+                    <div class="col-1 text-end text-danger"><i class="fa-regular fa-trash-can me-2"></i>Delete</div>
+                </div>
+            </div>
+        </div>
+
+        <!--Total de tarefas-->
+        <div class="row" id="total_tasks">
+            <div class="col">
+                <h4>Tarefas:<span class="text-info ">0</span></h4>
+            </div>
+        </div>
+
+
+        <!--sem tarefas-->
+        <div class="row" id="no_tasks">
+            <div class="col text-center">
+                <span class="opacity-75">não existem tarefas para apresentar</span>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="row me-3">
+            <div class="col text-center">
+                <hr>
+                <p>Lista de tarefas &copy; 2023</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+<!--
+    - ver tarefas
+        titulo
+        filtro para escolher tarefa que queremos ver (select)
+        botão para adicionar tarefas
+        (mensagem sobre o facto de não existirem tarefas)
+        caixa para tarefas
+            - possibilidade de alterar o status, editar tarefa e eliminar tarefa
+            paragrafo com o total de tarefas disponiveis (de acordo com o filtro)
+
+-->
