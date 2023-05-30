@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="asset/css/bootstrap.min.css">
     <link rel="stylesheet" href="asset/fontawesome/all.min.css">
+    <link rel="stylesheet" href="asset/css/app.css">
     <link rel="shortcut icon" href="asset/images/faicon.png" type="image/png">
 </head>
 
@@ -23,6 +24,7 @@
                     <h1>Lista de Tarefas</h1>
                 </div>
             </div>
+
             <div class="col text-end">
                 <div class="d-flex justify-content-end">
                     <select id="select-filter" class="form-select me-3 w-50">
@@ -34,42 +36,21 @@
                 </div>
             </div>
             <hr class="my-3">
+            <h4 class="m-0 p-0 text-info"><i class="fa-solid fa-user-tie m-2"></i> <span id="username"></span></h4>
+            <hr class="my-3">
         </div>
-
-        <!-- aspecto visula de uma tarefa -->
-        <div class="row mb-3">
-            <div class="col-12 border border-secondary rounded p-3 shadow">
-                <div class="row align-items-center">
-                    <div class="col-8">
-                        <div class="d-flex align-items-center">
-                            <h5><i class="fa-solid fa-circle-chevron-right me-2"></i></h5>
-                            <h5>ipsum dolor sit amet consectetur adipisicing elit. Recusandae nobis exercitationem repellat adipisci, sapiente doloribus.</h5>
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <select id="task_status p-2">
-                            <option value="new">new</option>
-                            <option value="in progress">in progress</option>
-                            <option value="canceled">canceled</option>
-                            <option value="done">done</option>
-                        </select>
-                    </div>
-                    <div class="col-1 text-end"><i class="fa-solid fa-pen-to-square me-2"></i>Edit</div>
-                    <div class="col-1 text-end text-danger"><i class="fa-regular fa-trash-can me-2"></i>Delete</div>
-                </div>
-            </div>
-        </div>
-
+        <div id="task_container"></div>
         <!--Total de tarefas-->
-        <div class="row" id="total_tasks">
+        <div class="row d-none" id="total_tasks">
             <div class="col">
-                <h4>Tarefas:<span class="text-info ">0</span></h4>
+                <h4>Tarefas:<span class="text-info">0</span></h4>
             </div>
         </div>
+
 
 
         <!--sem tarefas-->
-        <div class="row" id="no_tasks">
+        <div class="row d-none" id="no_tasks">
             <div class="col text-center">
                 <span class="opacity-75">não existem tarefas para apresentar</span>
             </div>
@@ -87,6 +68,7 @@
     </div>
 
     <script src="asset/js/bootstrap.bundle.min.js"></script>
+    <script src="asset/js/index.js"></script>
 </body>
 
 </html>
