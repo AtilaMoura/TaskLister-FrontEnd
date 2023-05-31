@@ -101,11 +101,13 @@ function get_user_task(id_user) {
 }
 
 function edit_task(id_task) {
-    console.log(id_task)
+    const url = window.location.origin + "C:/Users/dudua/OneDrive/Documentos/Estudos2023/node/frontend/edit_task.html?id_task=" + id_task;
+    window.location.href = url;
 }
 
 function delete_task(id_task) {
-    console.log(id_task)
+    const url = window.location.origin + "C:/Users/dudua/OneDrive/Documentos/Estudos2023/node/frontend/delete_task.html?id_task=" + id_task;
+    window.location.href = url;
 }
 
 function change_task_status(id_task) {
@@ -133,3 +135,8 @@ function change_task_status(id_task) {
     document.querySelector("#task_status_" + id_task).classList.add(color.select_bg_color);
 
 }
+
+document.querySelector("#btn_new_task").addEventListener('click', () => {
+    const url = window.location.origin + "C:/Users/dudua/OneDrive/Documentos/Estudos2023/node/frontend/new_task.html?id_user=" + id_user;
+    window.location.href = url;
+})

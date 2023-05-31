@@ -8,7 +8,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="asset/css/bootstrap.min.css">
     <link rel="stylesheet" href="asset/fontawesome/all.min.css">
-    <link rel="stylesheet" href="asset/css/app.css">
     <link rel="shortcut icon" href="asset/images/faicon.png" type="image/png">
 </head>
 
@@ -25,34 +24,20 @@
                 </div>
             </div>
 
-            <div class="col text-end">
-                <div class="d-flex justify-content-end">
-                    <select id="select-filter" class="form-select me-3 w-50">
-                        <option value=""></option>
-                        <option value="">filtro 1</option>
-                        <option value="">filtro 2</option>
-                    </select>
-                    <button class="btn btn-primary" id="btn_new_task"><i class="fa-solid fa-plus me-2"></i>Nova tarefa</button>
-                </div>
-            </div>
-            <hr class="my-3">
-            <h4 class="m-0 p-0 text-info"><i class="fa-solid fa-user-tie m-2"></i> <span id="username"></span></h4>
+
             <hr class="my-3">
         </div>
-        <div id="task_container"></div>
-        <!--Total de tarefas-->
-        <div class="row d-none" id="total_tasks">
+
+        <!-- aspecto visula de uma tarefa -->
+        <div class="row">
             <div class="col">
-                <h4>Tarefas:<span class="text-info">0</span></h4>
-            </div>
-        </div>
-
-
-
-        <!--sem tarefas-->
-        <div class="row d-none" id="no_tasks">
-            <div class="col text-center">
-                <span class="opacity-75">não existem tarefas para apresentar</span>
+                <h3>Eliminar Tarefa</h3>
+                <h2 class="text-center text-info mb-3" id="task_text">[text]</h2>
+                <h4 class="text-center mb-5" id="task_status">[status]</h4>
+                <div class="text-center">
+                    <a href="index.html" class="btn btn-secondary">Cancelar</a>
+                    <button class="btn btn-primary" id="btn_eliminar">Deletar</button>
+                </div>
             </div>
         </div>
 
@@ -68,7 +53,7 @@
     </div>
 
     <script src="asset/js/bootstrap.bundle.min.js"></script>
-    <script src="asset/js/index.js"></script>
+    <script src="asset/js/delete_task.js"></script>
 </body>
 
 </html>
