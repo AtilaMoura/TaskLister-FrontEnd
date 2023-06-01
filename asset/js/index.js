@@ -41,8 +41,8 @@ function get_username(id_user) {
         })
 }
 
-function get_user_task(id_user) {
-    fetch(`http://localhost:3000/user/${id_user}/tasks`)
+function get_user_task(id_user, status = "all") {
+    fetch(`http://localhost:3000/user/${id_user}/tasks/${status}`)
         .then(response => {
             if (response.status === 200) {
                 return response.json();
@@ -139,4 +139,9 @@ function change_task_status(id_task) {
 document.querySelector("#btn_new_task").addEventListener('click', () => {
     const url = window.location.origin + "C:/Users/dudua/OneDrive/Documentos/Estudos2023/node/frontend/new_task.html?id_user=" + id_user;
     window.location.href = url;
+})
+
+document.querySelector("#select-filter").addEventListener('click', () => {
+    task_status = document.querySelector("#select-filter").value;
+    get_user_task(id_user, task_status)
 })

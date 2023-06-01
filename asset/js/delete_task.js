@@ -13,7 +13,7 @@ window.onload = () => {
             }
         })
         .then(task => {
-            console.log(task[0].task_text);
+
             document.querySelector("#task_text").textContent = task[0].task_text;
             document.querySelector("#task_status").textContent = task[0].task_status;
 
